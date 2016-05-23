@@ -17,15 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4V-fw-Bxg">
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4V-fw-Bxg">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
                                 </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="dEC-fn-LwH" appends="YES" id="tBJ-28-Pxw"/>
+                                    <outletCollection property="gestureRecognizers" destination="ee9-EH-tj2" appends="YES" id="Es6-sG-kVc"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -41,6 +42,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="gameView" destination="h4V-fw-Bxg" id="EkT-ES-ayX"/>
                     </connections>
@@ -51,8 +53,13 @@
                         <action selector="tap:" destination="BYZ-38-t0r" id="R4R-2P-A43"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ee9-EH-tj2">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="o2a-Cx-rfc"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-279" y="204"/>
+            <point key="canvasLocation" x="-411" y="144.75"/>
         </scene>
     </scenes>
 </document>
